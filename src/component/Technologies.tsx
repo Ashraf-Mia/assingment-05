@@ -1,5 +1,5 @@
 // import React from 'react';
-import { use } from "react";
+import { use, useState } from "react";
 import TechnologyCard from "./TechnologyCard";
 import YourStack from "./YourStack";
 import type { Technology } from "../type";
@@ -10,7 +10,8 @@ interface technologyProps {
 
 const Technologies = ({ technologiesProps }: technologyProps) => {
   const technology = use(technologiesProps);
-  console.log(technology, "for check");
+
+  const [isSelected, setIsSelected] = useState<Technology[]>([]);
 
   return (
     <div className=" container m-auto">
@@ -28,15 +29,19 @@ const Technologies = ({ technologiesProps }: technologyProps) => {
           {/* technologiesCard */}
           {technology.map((tecItem: Technology) => {
             return (
-              <div>
-                <TechnologyCard key={tecItem.id} tecItem={tecItem} />
+              <div key={tecItem.id}>
+                <TechnologyCard
+                  tecItem={tecItem}
+                  isSelected={isSelected}
+                  setIsSelected={setIsSelected}
+                />
               </div>
             );
           })}
         </div>
         <div>
           {/* your stack */}
-          <YourStack />
+          <YourStack isSelected={isSelected} setIsSelected={setIsSelected} />
         </div>
       </div>
     </div>

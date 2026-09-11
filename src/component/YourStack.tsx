@@ -1,6 +1,13 @@
 // import React from 'react';
+import type { Dispatch, SetStateAction } from "react";
+import type { Technology } from "../type";
 
-const YourStack = () => {
+interface IisSelectedProps {
+  isSelected: Technology[];
+  setIsSelected: Dispatch<SetStateAction<Technology[]>>;
+}
+
+const YourStack = ({ isSelected, setIsSelected }: IisSelectedProps) => {
   return (
     <div>
       <div className="card bg-base-100 w-96 shadow-sm">
