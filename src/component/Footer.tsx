@@ -2,7 +2,7 @@
 import footerImg from "../assets/logo-text.png";
 const Footer = () => {
   return (
-    <div>
+    <>
       <div className=" flex justify-between container m-auto mb-14">
         <div>
           <img className="w-25" src={footerImg} alt="footer img" />
@@ -82,7 +82,7 @@ const Footer = () => {
           <li>Terms</li>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 
