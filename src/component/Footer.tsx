@@ -3,7 +3,7 @@ import footerImg from "../assets/logo-text.png";
 const Footer = () => {
   return (
     <>
-      <div className=" flex justify-between container m-auto mb-14">
+      <div className=" flex justify-between container m-auto mb-14 pt-16">
         <div>
           <img className="w-25" src={footerImg} alt="footer img" />
           <p className=" text-[#64748B] font-jakarta text-[12px] font-normal mt-3 ">
