@@ -2,6 +2,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { Technology } from "../type";
 import { FaXmark } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 interface IisSelectedProps {
   isSelected: Technology[];
@@ -14,10 +15,14 @@ const YourStack = ({ isSelected, setIsSelected }: IisSelectedProps) => {
       (syngleIsSelected) => syngleIsSelected.id != item.id,
     );
     setIsSelected(restItems);
+    toast.info(`${item.name} React removed from Stack.`, {
+      position: "top-center",
+    });
   };
 
   const handleRemoveAll = () => {
     setIsSelected([]);
+    toast.warning(`All technologies removed.`, { position: "top-center" });
   };
   return (
     <div className="card bg-base-100 w-70  shadow-sm p-5">
@@ -40,7 +45,7 @@ const YourStack = ({ isSelected, setIsSelected }: IisSelectedProps) => {
       )}
       {isSelected.map((item: Technology) => {
         return (
-          <div key={item.id} className=" flex flex-col space-y-5">
+          <div key={item.id} className=" grid grid-cols-1 mb-2">
             <div className=" flex justify-between items-center border border-gray-400 rounded-lg px-1.5 py-3">
               <div className="flex items-center gap-2">
                 <img className="w-7 h-7" src={item.icon} alt={item.name} />

@@ -3,6 +3,7 @@ import { use, useState } from "react";
 import TechnologyCard from "./TechnologyCard";
 import YourStack from "./YourStack";
 import type { Technology } from "../type";
+import { toast } from "react-toastify";
 // import { toast } from "react-toastify";
 
 interface technologyProps {
@@ -20,6 +21,17 @@ const Technologies = ({ technologiesProps }: technologyProps) => {
       return;
     }
     setIsSelected([...isSelected, tecItem]);
+    // toast.success("🦄 Wow so easy!", {
+    //   position: "top-center",
+    //   autoClose: 5000,
+    //   hideProgressBar: false,
+    //   closeOnClick: false,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    //   theme: "light",
+    // });
+    toast.success(`${tecItem.name} added to stack`, { position: "top-center" });
   };
 
   return (
