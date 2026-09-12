@@ -21,7 +21,10 @@ const TechnologyCard = ({
           <span className="badge badge-xs badge-warning">{tecItem.badge}</span>
         </div>
         <h2 className="text-2xl font-bold">{tecItem.name}</h2>
-        <p> {tecItem.description}</p>
+        <p className="font-jakarta text-[12px] text-[#64748B]">
+          {" "}
+          {tecItem.description}
+        </p>
         <div className="flex justify-between">
           <p>{tecItem.category}</p>
 

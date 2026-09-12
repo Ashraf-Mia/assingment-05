@@ -3,6 +3,7 @@ import { use, useState } from "react";
 import TechnologyCard from "./TechnologyCard";
 import YourStack from "./YourStack";
 import type { Technology } from "../type";
+// import { toast } from "react-toastify";
 
 interface technologyProps {
   technologiesProps: Promise<Technology[]>;
