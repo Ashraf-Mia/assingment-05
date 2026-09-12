@@ -13,6 +13,14 @@ const Technologies = ({ technologiesProps }: technologyProps) => {
 
   const [isSelected, setIsSelected] = useState<Technology[]>([]);
 
+  const handleAddToStack = (tecItem: Technology) => {
+    const alradyAdded = isSelected.some((item) => item.id === tecItem.id);
+    if (alradyAdded === true) {
+      return;
+    }
+    setIsSelected([...isSelected, tecItem]);
+  };
+
   return (
     <div className=" container m-auto">
       <h2 className="font-inter text-4xl font-extrabold">
@@ -28,12 +36,15 @@ const Technologies = ({ technologiesProps }: technologyProps) => {
         <div className="grid grid-cols-3 gap-5">
           {/* technologiesCard */}
           {technology.map((tecItem: Technology) => {
+            const alradyAdded = isSelected.some(
+              (item) => item.id === tecItem.id,
+            );
             return (
               <div key={tecItem.id}>
                 <TechnologyCard
                   tecItem={tecItem}
-                  isSelected={isSelected}
-                  setIsSelected={setIsSelected}
+                  handleAddToStack={handleAddToStack}
+                  isAdded={alradyAdded}
                 />
               </div>
             );

@@ -1,25 +1,18 @@
 // import React from 'react';
 import { MdOutlineStar } from "react-icons/md";
 import type { Technology } from "../type";
-import { type Dispatch, type SetStateAction } from "react";
-import { toast } from "react-toastify";
-// import { useState } from "react";
 
 interface tecItemCardProps {
   tecItem: Technology;
-  isSelected: Technology[];
-  setIsSelected: Dispatch<SetStateAction<Technology[]>>;
+  handleAddToStack: (tecItem: Technology) => void;
+  isAdded: boolean;
 }
 
 const TechnologyCard = ({
   tecItem,
-  isSelected,
-  setIsSelected,
+  handleAddToStack,
+  isAdded,
 }: tecItemCardProps) => {
-  //   const [onAdd, setOnAdd] = useState(false);
-  const handleSetIsSelected = () => {
-    setIsSelected([...isSelected, tecItem]);
-  };
   return (
     <div className="card bg-base-100 shadow-sm ">
       <div className="card-body">
@@ -41,11 +34,11 @@ const TechnologyCard = ({
         </div>
         <div className="mt-6">
           <button
-            onClick={handleSetIsSelected}
+            onClick={() => handleAddToStack(tecItem)}
+            disabled={isAdded === true ? true : false}
             className="btn bg-black text-white btn-block "
           >
-            {/* {onAdd === true ? "selected" : "Add to Stack"} */}
-            Add to Stack
+            {isAdded === true ? "✔ Added to Stack" : "Add to Stack"}
           </button>
         </div>
       </div>
