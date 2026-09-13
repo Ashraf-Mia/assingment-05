@@ -16,13 +16,13 @@ const YourStack = ({ isSelected, setIsSelected }: IisSelectedProps) => {
     );
     setIsSelected(restItems);
     toast.info(`${item.name} React removed from Stack.`, {
-      position: "top-center",
+      position: "bottom-right",
     });
   };
 
   const handleRemoveAll = () => {
     setIsSelected([]);
-    toast.warning(`All technologies removed.`, { position: "top-center" });
+    toast.warning(`All technologies removed.`, { position: "bottom-right" });
   };
   return (
     <div className="card bg-base-100   shadow-sm p-5 w-85.25 lg:w-70">

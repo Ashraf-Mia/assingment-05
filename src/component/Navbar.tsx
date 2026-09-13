@@ -1,4 +1,3 @@
-// import React from "react";
 import { useState } from "react";
 import navLogo from "../assets/logo-text.png";
 import hamburger from "../assets/hamburger.png";
@@ -9,8 +8,8 @@ const Navbar = () => {
     setOpenMenu(!openMenu);
   };
   return (
-    <div>
-      <nav className=" flex justify-between container m-auto items-center p-5">
+    <div className=" sticky top-0 z-50 bg-white">
+      <nav className="  flex justify-between container m-auto items-center p-5">
         <button onClick={handleOpenMenu} className=" lg:hidden">
           <img src={hamburger} alt="" />
         </button>
@@ -40,7 +39,7 @@ const Navbar = () => {
         </div>
       </nav>
       {openMenu === true && (
-        <ul className=" lg:hidden flex flex-col items-center gap-5 py-5 text-[14px]">
+        <ul className=" sticky top-18 z-50 bg-white lg:hidden flex flex-col items-center gap-5 py-5 text-[14px]">
           <li>
             <a className=" font-semibold text-[#DB2777]" href="#">
               Home

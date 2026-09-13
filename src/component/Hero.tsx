@@ -11,7 +11,7 @@ const Hero = () => {
             Development Stack
           </span>
         </h2>
-        <p className=" font-jakarta text-[18px] font-normal fotn-[#475569] pb-10 pt-6">
+        <p className=" font-jakarta text-[18px] font-normal text-[#475569] pb-10 pt-6">
           Explore frontend, backend, database, and tooling options,
           <br className=" hidden lg:block" />
           compare them side by side, and put together the stack that fits your

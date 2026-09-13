@@ -1,3 +1,25 @@
+# Name: Dev Stack Builder Website
+
+## Description: Dev Stack Builder is a responsive web application where developers can explore different technologies and build their ideal development stack.
+
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+- DaisyUI
+- React Toastify
+- JSON
+- Vite
+
+## Features
+
+- Browse technologies with category, difficulty, rating, and badge information.
+- Add technologies to your own stack and remove them individually or all at once.
+- Fully responsive design for mobile, tablet, and desktop.
+
+## Answer of some Questions
+
 1. What is JSX, and why is it used in React?
    Answer: Jsx is syntax thats lets us write HTML code inside javascript. its makes react ul easier to write and understand.
 

@@ -22,7 +22,9 @@ const Technologies = ({ technologiesProps }: technologyProps) => {
     }
     setIsSelected([...isSelected, tecItem]);
 
-    toast.success(`${tecItem.name} added to stack`, { position: "top-center" });
+    toast.success(`${tecItem.name} added to stack`, {
+      position: "bottom-right",
+    });
   };
 
   return (
