@@ -2,9 +2,9 @@
 import HeroImg from "../assets/banner-stack.png";
 const Hero = () => {
   return (
-    <div className=" flex justify-between items-center container m-auto mt-30">
+    <div className=" flex flex-col text-center items-center mt-20 lg:flex lg:flex-row lg:text-left lg:justify-between  container lg:m-auto lg:mt-30">
       <div>
-        <h2 className="font-inter text-[60px] font-extrabold  tracking-[-1.5px] leading-15">
+        <h2 className="font-inter text-[30px] font-bold  lg:text-[60px] lg:font-extrabold  tracking-[-1.5px] lg:leading-15">
           Build Your Ideal
           <br />{" "}
           <span className="bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
@@ -13,7 +13,7 @@ const Hero = () => {
         </h2>
         <p className=" font-jakarta text-[18px] font-normal fotn-[#475569] pb-10 pt-6">
           Explore frontend, backend, database, and tooling options,
-          <br />
+          <br className=" hidden lg:block" />
           compare them side by side, and put together the stack that fits your
           next project.
         </p>

@@ -6,7 +6,18 @@
     icon: string,
     rating: number,
     difficulty: string,
-    badge: string
+    badge:
+    | "Popular"
+    | "Versatile"
+    | "Fast"
+    | "Standard"
+    | "Top SQL"
+    | "Cache"
+    | "Ubiquitous"
+    | "Essential"
+    | "Robust"
+    | "Modern"
+    | "Containers";
 }
 
 

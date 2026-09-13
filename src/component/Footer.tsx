@@ -3,16 +3,20 @@ import footerImg from "../assets/logo-text.png";
 const Footer = () => {
   return (
     <>
-      <div className=" flex justify-between container m-auto mb-14 pt-16">
-        <div>
-          <img className="w-25" src={footerImg} alt="footer img" />
-          <p className=" text-[#64748B] font-jakarta text-[12px] font-normal mt-3 ">
+      <div className=" flex  justify-between container m-auto mb-8 lg:mb-14 pt-16 text-center ">
+        <div className=" text-center lg:text-left">
+          <img
+            className="w-25 mx-auto lg:mx-0"
+            src={footerImg}
+            alt="footer img"
+          />
+          <p className=" text-[#64748B] font-jakarta text-[12px] font-normal mt-3 text-center lg:text-left ">
             Curated tools, technologies, and resources for developers building{" "}
             <br />
             modern software.
           </p>
 
-          <ul className=" flex justify-start m-auto gap-3 mt-5 text-[#475569] font-jakarta text-[12px] font-semibold ">
+          <ul className=" flex justify-center lg:justify-start m-auto gap-3 mt-5 text-[#475569] font-jakarta text-[12px] font-semibold ">
             <li>
               <a href="#">GitHub</a>
             </li>
@@ -25,7 +29,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
+        <div className=" hidden md:block">
           <h2 className="font-jakarta text-[12px] font-bold text-[#0F172A] mb-4">
             PRODUCT
           </h2>
@@ -42,7 +46,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
+        <div className=" hidden md:block">
           <h2 className="font-jakarta text-[12px] font-bold text-[#0F172A] mb-4">
             COMPANY
           </h2>
@@ -59,7 +63,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="pr-6">
+        <div className="  hidden md:block lg:pr-6">
           <h2 className="font-jakarta text-[12px] font-bold text-[#0F172A] mb-4">
             LEGAL
           </h2>

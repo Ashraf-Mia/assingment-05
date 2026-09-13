@@ -21,32 +21,23 @@ const Technologies = ({ technologiesProps }: technologyProps) => {
       return;
     }
     setIsSelected([...isSelected, tecItem]);
-    // toast.success("🦄 Wow so easy!", {
-    //   position: "top-center",
-    //   autoClose: 5000,
-    //   hideProgressBar: false,
-    //   closeOnClick: false,
-    //   pauseOnHover: true,
-    //   draggable: true,
-    //   progress: undefined,
-    //   theme: "light",
-    // });
+
     toast.success(`${tecItem.name} added to stack`, { position: "top-center" });
   };
 
   return (
     <div className=" container m-auto">
-      <h2 className="font-inter text-4xl font-extrabold">
+      <h2 className=" text-2xl font-bold text-center font-inter lg:text-4xl lg:font-extrabold lg:text-left">
         Explore the{" "}
         <span className=" bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent ">
           Technologies
         </span>
       </h2>
-      <p className=" font-jakarta text-[16px] text-[#64748B] pt-2 pb-10">
+      <p className=" text-center font-jakarta text-[16px] lg:text-left text-[#64748B] pt-2 pb-10">
         Pick one technology per category to build your ideal stack.
       </p>
-      <div className=" flex justify-between m-auto gap-8">
-        <div className="grid grid-cols-3 gap-5">
+      <div className=" flex flex-col m-auto lg:flex-row justify-between gap-8">
+        <div className=" grid grid-cols-1 m-auto  md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* technologiesCard */}
           {technology.map((tecItem: Technology) => {
             const alradyAdded = isSelected.some(

@@ -25,7 +25,7 @@ const YourStack = ({ isSelected, setIsSelected }: IisSelectedProps) => {
     toast.warning(`All technologies removed.`, { position: "top-center" });
   };
   return (
-    <div className="card bg-base-100 w-70  shadow-sm p-5">
+    <div className="card bg-base-100   shadow-sm p-5 w-85.25 lg:w-70">
       <h2 className=" font-jakarta text-[16px] font-bold">Your Stack</h2>
       {isSelected.length === 0 ? (
         <p className="font-jakarta text-[12px] text-[#64748B] mb-4 mt-1">
@@ -45,8 +45,8 @@ const YourStack = ({ isSelected, setIsSelected }: IisSelectedProps) => {
       )}
       {isSelected.map((item: Technology) => {
         return (
-          <div key={item.id} className=" grid grid-cols-1 mb-2">
-            <div className=" flex justify-between items-center border border-gray-400 rounded-lg px-1.5 py-3">
+          <div key={item.id} className=" grid grid-cols-1 mb-2 ">
+            <div className="  flex justify-between items-center border border-gray-400 rounded-lg px-1.5 py-3">
               <div className="flex items-center gap-2">
                 <img className="w-7 h-7" src={item.icon} alt={item.name} />
                 <div>
